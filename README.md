@@ -95,6 +95,12 @@ Once the installation is complete, you can explore the project's models and resu
 The notebooks are configured to load pre-trained weights by default, allowing for quick evaluation of the models. If you wish to retrain a model, simply set the `load_weights` variable to `False` in the respective notebook.
 
 ------------------------------------------------------------------------
+## 📜 License
+
+This project is licensed under the MIT License. See
+[LICENSE.md](./LICENSE.md) for more info.
+
+------------------------------------------------------------------------
 ## 👨🏻‍💻 Acknowledgements
 - We sincerely acknowledge the Original Creators of the DeepSat-6 dataset for making this data publicly available 
 - Special thanks to the Open-Source community for tools like TensorFlow, Keras, and more.
