@@ -98,7 +98,7 @@ The notebooks are configured to load pre-trained weights by default, allowing fo
 ## 📜 License
 
 This project is licensed under the MIT License. See
-[LICENSE.md](./LICENSE.md) for more info.
+[LICENSE.md](./LICENSE) for more info.
 
 ------------------------------------------------------------------------
 ## 👨🏻‍💻 Acknowledgements
