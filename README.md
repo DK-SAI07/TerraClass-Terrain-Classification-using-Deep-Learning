@@ -95,15 +95,34 @@ Once the installation is complete, you can explore the project's models and resu
 The notebooks are configured to load pre-trained weights by default, allowing for quick evaluation of the models. If you wish to retrain a model, simply set the `load_weights` variable to `False` in the respective notebook.
 
 ------------------------------------------------------------------------
+## 📊 Results & Analysis
+
+The models were rigorously evaluated on a held-out (unseen) test dataset of 81,000 images. Notably, the custom-built CNN delivered strong performance, highlighting that a well-designed lightweight model can compete closely with deeper, pre-trained architectures for this specific task.
+
+| Model                 | Test Accuracy |
+| :-------------------- | :------------ |
+| **Custom CNN** | **97.5%** |
+| VGG16 (Transfer)      | 96.4%         |
+| ResNet50 (Transfer)   | 79%           |
+
+**Key Observations:**
+
+- The custom CNN outperformed the transfer learning models, achieving the highest accuracy.
+- Evaluation using classification reports and confusion matrices revealed that the most frequent classification errors involved confusing `barren land` with `grassland` and `grassland` with `trees`.
+- These misclassifications suggest that the spectral or spatial characteristics of these land types may overlap in the feature space used by the model.
+------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------
+## 👨🏻‍💻 Acknowledgements
+- We sincerely acknowledge the Original Creators of the DeepSat-6 dataset for making this data publicly available.
+- Special thanks to the Open-Source community for tools like TensorFlow, Keras, and more.
+
+------------------------------------------------------------------------
 ## 📜 License
 
 This project is licensed under the MIT License. See
 [LICENSE.md](./LICENSE) for more info.
-
-------------------------------------------------------------------------
-## 👨🏻‍💻 Acknowledgements
-- We sincerely acknowledge the Original Creators of the DeepSat-6 dataset for making this data publicly available 
-- Special thanks to the Open-Source community for tools like TensorFlow, Keras, and more.
 
 ------------------------------------------------------------------------
 ## 🙋🏻‍♂️ Need Help?
