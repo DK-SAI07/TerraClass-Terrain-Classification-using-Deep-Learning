@@ -50,7 +50,7 @@ Since the dataset is over >5GB, it is **not included in this repository**.
 
 </td>
 <td width="40%">
-<img src="./sat_img.png" alt="DeepSat Sample" width="100%" />
+<img src="dataset/sat_img.png" alt="DeepSat Sample" width="100%" />
 </td>
 </tr>
 </table>
