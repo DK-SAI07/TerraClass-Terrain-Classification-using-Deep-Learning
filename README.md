@@ -29,10 +29,14 @@ This project is a testament to the potential of deep learning in remote sensing,
 * **Machine Learning:** Scikit-learn
 * **Environment:** Jupyter Notebook
 * **Version Control**: Git, Git LFS for large files
-
 ## 📄 Dataset Details
+
+<table>
+<tr>
+<td width="60%">
+
 This project utilizes the **DeepSat (SAT-6) Airborne Dataset**.  
-It consists of **405,000 image** patches each of size 28x28 and covering **6 landcover classes**. <br/>
+It consists of **405,000 image** patches each of size 28x28 and covering **6 land-cover classes**. <br/>
 Since the dataset is over >5GB, it is **not included in this repository**.  
 
 ➡️ Instructions to download are provided in [`dataset/Dataset-Instructions.pdf`](dataset/Dataset_Instructions.pdf) file.  
@@ -42,7 +46,15 @@ Since the dataset is over >5GB, it is **not included in this repository**.
 - **Classes:** `Barren Land, Trees, Grassland, Roads, Water, Buildings`
 
 > **Note:**  
-> Don’t worry, everything’s covered — just check the PDF and Kaggle link. 🌍📦
+> Don’t worry, everything’s covered — just check the PDF and Kaggle link. 📦
+
+</td>
+<td width="40%">
+<img src="./sat_img.png" alt="DeepSat Sample" width="100%" />
+</td>
+</tr>
+</table>
+
 
 ------------------------------------------------------------------------
 ## 🗂️ Folder Structure
@@ -62,6 +74,7 @@ TerraClass-Terrain-Classification-using-Deep-Learning/
 │   ├── Dataset_Instructions.pdf   # Kaggle dataset link & setup
 │   ├── res_baseline.weights.h5    # ResNet50 trained weights
 │   ├── res_history.csv            # ResNet50 training history
+│   ├── sat_img.png                # Sample from DeepSat-6 dataset
 │   ├── vgg_baseline.weights.h5    # VGG16 trained weights
 │   └── vgg_history.csv            # VGG16 training history
 ├── LICENSE.md
@@ -111,7 +124,22 @@ The models were rigorously evaluated on a held-out (unseen) test dataset of 81,0
 - Evaluation using classification reports and confusion matrices revealed that the most frequent classification errors involved confusing `barren land` with `grassland` and `grassland` with `trees`.
 - These misclassifications suggest that the spectral or spatial characteristics of these land types may overlap in the feature space used by the model.
 ------------------------------------------------------------------------
+## 🚀 Future Work
 
+Based on the project's findings and analysis, future work could focus on several key areas to enhance the model's capabilities and practical utility.
+
+### 1. Spatial Accuracy and Resolution Improvement
+- **Refined Classification Workflow:** A more refined workflow could be implemented to improve spatial accuracy. This would involve classifying partially overlapping image tiles and assigning classification results specifically to the center-most pixels of each tile.  
+- **Enhanced Pixel-Level Resolution:** This refined approach would increase the spatial accuracy of the final classification map by enhancing pixel-level resolution, leading to finer granularity in land use delineation across large areas.
+
+### 2. Georeferencing and User Interface Development
+- **Spatial Metadata Restoration:** Future work could extend the application to include a workflow for georeferencing, which involves restoring the spatial metadata of the reassembled land use classification.  
+- **Complex Spatial Evaluations:** This enhancement would enable more complex spatial evaluations, such as calculating statistics over different regions (e.g., class distribution by county).  
+- **Interactive User Interfaces:** Developing user interfaces to interact with the classified output would further enhance the utility of the system.
+
+### 3. Model Generalization and Class Differentiability
+- **Adapting to Diverse Datasets:** Future research may focus on adapting the framework to more diverse satellite datasets for generalization.  
+- **Improving Class Differentiability:** Efforts should also be made to improve the model's ability to differentiate between similar classes, such as grassland and barren land, which were identified as challenging during misclassification analysis.
 
 ------------------------------------------------------------------------
 ## 👨🏻‍💻 Acknowledgements
